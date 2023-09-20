@@ -1,5 +1,6 @@
 ﻿//using ServiceTest.Services;
 using Microsoft.Extensions.Logging;
+using ServiceTest.Services;
 using ServiceTest.ViewModels;
 using ServiceTest.Views;
 
@@ -20,6 +21,7 @@ public static class MauiProgram
 		
 		builder.Services.AddSingleton<MainPage>();
 		builder.Services.AddSingleton<MainPageViewModel>();
+		builder.Services.AddSingleton<TriviaService>();
 
 #if DEBUG
 		builder.Logging.AddDebug();
